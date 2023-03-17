@@ -30,16 +30,19 @@ for(let i=3; i<6; i++){
 // 1.c. TODO: Write a for loop to console.log EVEN numbers from 2 to 10
 //   - Which part of the example loop do you need to change to do this?
 console.log('count even numbers from 2 to 10 (2, 4, 6, 8, 10):');
-
-for(let i=2; i<11; i += 2){
+let EVEN = ['2', '4', '6', '8', '10']
+for(let i=2; i<EVEN.length; i += 2){
   console.log('count from 2 to 10 (2, 4, 6, 8, 10):', i);
 }
+
+
+
 // I had to change the i=0; to i=2; then change to i<2 for the condition and lastly change the i++ to i +=2
 
 // 1.d. (STRETCH) TODO: Write a for loop to do a countdown from 5 to 0
 console.log('STRETCH: countdown from 5 to 0');
 
-for(let i=6; i-- > 0;){
+for(let i = 5; i > 0; i--){
   console.log('STRETCH: countdown from 5 to 0', i);
 
 }
@@ -50,6 +53,7 @@ let stars = ['Polaris', 'Gacrux', 'Formalhaut', 'Rigel', 'Deneb']
 
 // 2.a. TODO: Write a for of loop to console.log each star in the 'stars' array
 console.log('Some stars:');
+let star;
 
 for( star of stars ){
   console.log('Some Stars:', star );
@@ -62,7 +66,7 @@ console.log('---- 3. While loop ----');
 console.log('Some stars using while:');
 let starr = 0
 while( starr < stars.length){
-  console.log('Some stars using while:', `${stars}` );
+  console.log('Some stars using while:', stars[starr] );
   starr++
 }
 
@@ -76,8 +80,10 @@ while( i < 6 ){
 }
 // 3.c. TODO: Write a while loop to console.log the numbers from 10 to 5
 console.log('count backwards from 10 to 5');
+let g = 10;
+// Had to use (g) due to i being already in use as a variable. 
 
-while( i <= 10){
-  console.log('count backwards from 10 to 5', i );
-  i++;
+while( g > 4){
+  console.log('count backwards from 10 to 5', g );
+  g--;
 }
